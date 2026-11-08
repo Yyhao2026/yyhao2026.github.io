@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#F2EFE7">
+  <meta name="description" content="从一枚反字，到一张由你排印的作品。体验选字、排版、上墨和刷印，保存你的数字纪念印张。">
+  <title>字有新生 · 活字印刷工坊</title>
+  <link rel="icon" type="image/svg+xml" href="./mark.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./culture.css">
+  <link rel="stylesheet" href="./creation.css">
+</head>
+<body class="culture-edition free-workshop">
+  <a class="skip-link" href="#workshop">跳到排印工作台</a>
+  <header class="masthead wrap">
+    <a class="wordmark" href="./" aria-label="字有新生首页"><span class="brand-mark" aria-hidden="true">字</span><span>字有新生<small>活字印刷数字艺术工坊</small></span></a>
+    <div class="header-tools"><span class="edition-label">古艺新生 · 交互体验</span><button id="sound-toggle" class="text-button" aria-pressed="false"><span aria-hidden="true">♪</span> 开启声音</button></div>
+  </header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="main-title">
+      <span class="intro-cloud intro-cloud-left" aria-hidden="true"></span><span class="intro-cloud intro-cloud-right" aria-hidden="true"></span>
+      <div class="intro-text"><p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> 中华造物 · 活字印刷</p><h1 id="main-title">一字一印，<br>文脉<span>相传。</span></h1><p class="intro-copy">把一枚反字，印成一次新生。<br>于方寸木字间，感受文字与匠心的分量。</p><a class="intro-link" href="#workshop">入坊排印 <span aria-hidden="true">↓</span></a></div>
+      <div class="intro-art"><img src="./type-still-life.svg" width="760" height="480" alt="木活字、线装书、毛笔和印张组成的原创工艺插画"><span class="art-note" aria-hidden="true">以字为媒<br>古艺新生</span></div>
+    </section>
+    <div class="workshop-heading"><div><span class="section-label">亲手体验</span><h2>方寸字版，万千文章。</h2></div><p>从捡字到揭纸，<span>让古老的智慧在指尖发生。</span></p></div>
+    <section id="workshop" class="workshop" aria-label="排印工作台">
+      <div class="workshop-bar"><span class="workshop-caption"><i aria-hidden="true"></i> 排印工作台</span><ol id="steps" class="steps" aria-label="制作进度"></ol><button id="reset" class="text-button reset-button">↻ <span>重新开始</span></button></div>
+      <div class="workspace">
+        <aside class="left-panel" aria-labelledby="phrase-heading">
+          <div class="editor-heading"><div class="section-label">01 / 自由创作</div><h2 id="phrase-heading">这一版，写你所想。</h2></div>
+          <form id="creation-form" class="creation-editor" novalidate>
+            <label for="text-input">想印下的文字 <span id="text-count">8 / 16字</span></label>
+            <textarea id="text-input" rows="3" aria-describedby="text-help draft-status" spellcheck="false">一字一印匠心相传</textarea>
+            <p id="text-help" class="field-help">1—16字，支持汉字、字母、数字及常用标点。空格换行不制字，不自动繁简转换。</p>
+            <div class="layout-fields"><label for="rows">行数<select id="rows"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label for="cols">列数<select id="cols"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label></div>
+            <label class="slider-label" for="font-scale">文字大小 <output id="font-value" for="font-scale">86%</output></label><input id="font-scale" type="range" min="65" max="100" value="86" step="1">
+            <label class="slider-label" for="letter-gap">字距 <output id="gap-value" for="letter-gap">18%</output></label><input id="letter-gap" type="range" min="0" max="50" value="18" step="1">
+            <p id="draft-status" class="draft-status" role="status" aria-live="polite">版面8格，文字8字。</p>
+          </form>
+          <details id="examples" class="example-picker"><summary>从一句示例开始 <span aria-hidden="true">＋</span></summary><div id="phrases" class="phrase-list"></div></details>
+          <div class="glyph-heading"><h3>待用字模</h3><span id="available-count">8 枚</span></div>
+          <div id="glyphs" class="glyph-shelf" aria-label="待用字模，选字后点击版面位置"></div>
+          <p id="shelf-hint" class="shelf-hint">开始排印后，就能捡起这些字。</p>
+        </aside>
+        <div class="stage-column">
+          <div id="scene" class="scene" data-stage="select" data-busy="false" aria-label="木活字工作台">
+            <span class="scene-pattern" aria-hidden="true"></span><span class="scene-corner scene-corner-tl" aria-hidden="true"></span><span class="scene-corner scene-corner-tr" aria-hidden="true"></span><span class="scene-corner scene-corner-bl" aria-hidden="true"></span><span class="scene-corner scene-corner-br" aria-hidden="true"></span>
+            <div class="scene-topline"><span id="plate-summary">一版 · 自由创作</span><span id="view-label">创作草稿 / 正字</span></div>
+            <span class="scene-side-label" aria-hidden="true">捡字 · 排版 · 刷印</span>
+            <div class="table-shadow" aria-hidden="true"></div>
+            <div id="tray" class="tray"><div class="wedge wedge-left" aria-hidden="true"></div><div id="slots" class="slots" aria-label="印版，左列为第1到4位，右列为第5到8位"></div><div class="wedge wedge-right" aria-hidden="true"></div></div>
+            <div class="ink-dish" aria-hidden="true"><span>墨</span></div>
+            <div id="ink-brush" class="brush ink-brush" aria-hidden="true"><i></i><b></b><em>墨刷</em></div>
+            <div id="rubbing-brush" class="brush rubbing-brush" aria-hidden="true"><i></i><b></b><em>刷印刷</em></div>
+            <div id="paper" class="paper" aria-hidden="true"><div class="paper-back"></div><div class="paper-front"><div id="paper-words" class="free-print"></div></div></div>
+            <div class="scene-bottomline"><span id="scene-state">工具已就位，等你开始</span><span class="angle-tag">数字工艺体验</span></div>
+          </div>
+          <div class="scene-caption"><span class="caption-number" id="caption-number">01</span><p id="caption">先选一句喜欢的文字，再开始你的第一次排印。</p></div>
+          <div class="plate-legend"><span><i class="legend-square"></i> 木字模上的字是反字</span><span>成品按右列 → 左列阅读</span></div>
+        </div>
+        <aside class="instruction-panel" aria-labelledby="stage-title">
+          <div class="instruction-top"><span id="stage-index" class="section-label">第一步 / 选句</span><span id="stage-symbol" class="stage-symbol" aria-hidden="true">選</span></div>
+          <h2 id="stage-title">写自己的话，<br>排自己的版。</h2>
+          <p id="instruction" class="instruction-copy">输入文字，调整行列、大小与字距。中间是正字草稿，满意后生成字模，开始亲手排印。</p>
+          <div id="selection-note" class="selection-note">本次印句：一字一印，匠心相传</div>
+          <details id="proof-panel" class="proof-panel"><summary>查看正字预览 <span aria-hidden="true">＋</span></summary><div id="proof"></div><p id="proof-note">竖排右列先读；留空格位也会保留。请确认设备字体能显示所选文字。</p></details>
+          <div class="actions"><p id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true">工作台准备好了。</p><button id="primary" class="primary-button">生成字模，开始排印 <span aria-hidden="true">→</span></button><div class="secondary-actions"><button id="undo" class="secondary-button" hidden>撤销一枚</button><button id="clear" class="secondary-button" hidden>清空排版</button></div><button id="edit" class="text-button again-button" hidden>返回修改文案与版式</button><button id="again" class="text-button again-button" hidden>重新创作 ↗</button></div>
+          <div class="craft-note"><span class="note-title">纸墨之间</span><p id="culture-note">活字的智慧，在于每个字都能独立组合，用过之后，还能归位重排。</p></div>
+        </aside>
+      </div>
+    </section>
+    <section class="context-row" aria-label="工艺说明">
+      <div class="context-title"><span class="section-label">工艺有来处</span><h2>印下的是文字，<br>接续的是文脉。</h2></div>
+      <div class="context-copy"><p>本体验参考浙江瑞安木活字印刷技艺。当地技艺与修谱实践紧密相连，字模、排版与刷印承载着持续使用的造物经验。</p><section class="visible-craft-sources"><h3>工艺依据与体验说明</h3><div class="source-content"><p>本作品简化了制字、研墨、润版和装订等环节。上墨与纸背刷印使用不同工具；字形、版式和纪念印张为当代再设计。</p><p>三条示例印句为项目设计用语，非古籍引文。当前工作台以几何方块模拟木字模。</p><a href="https://www.ihchina.cn/printing_technological.html" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 · 工艺流程 ↗</a><a href="https://www.ihchina.cn/printing_overview.html" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 · 项目概况 ↗</a><a href="https://ich.unesco.org/en/USL/wooden-movable-type-printing-of-china-00322" target="_blank" rel="noopener noreferrer">UNESCO · 中国木活字印刷术（英文） ↗</a></div></section></div>
+      <div class="context-facts"><span class="context-seal" aria-hidden="true">古艺<br>新生</span><p>取法传统<br>表达当下</p></div>
+    </section>
+    <section class="culture-values" aria-label="活字的三重智慧">
+      <article><span class="value-character" aria-hidden="true">字</span><div><h3>一字，见匠心。</h3><p>反写、雕刻、捡取，每一枚小小字块，都凝聚着耐心与手艺。</p></div></article>
+      <article><span class="value-character" aria-hidden="true">版</span><div><h3>一版，见智慧。</h3><p>散字成篇，用后归位。可拆、可组、可再用，是活字灵活的造物思路。</p></div></article>
+      <article><span class="value-character" aria-hidden="true">印</span><div><h3>一印，见传承。</h3><p>纸墨留下字迹。今天，以数字体验亲近工艺，让更多人看见它的价值。</p></div></article>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>字有新生 <span class="footer-dot">·</span> 让古艺被看见，也被亲手体验。</span><span>“民族魂” · 古艺新生</span></footer>
+  <noscript><p class="noscript">请启用浏览器 JavaScript，以体验排版、印刷和印张保存。</p></noscript>
+  <script type="module">import {mountWorkshop} from "./app.mjs"; mountWorkshop();</script>
+</body>
+</html>

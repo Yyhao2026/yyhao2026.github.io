@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" fill="none">
+<defs>
+ <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B59871"/><stop offset=".6" stop-color="#94714D"/><stop offset="1" stop-color="#785638"/></linearGradient>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFDF7"/><stop offset="1" stop-color="#E8E0CF"/></linearGradient>
+ <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#51675A"/><stop offset="1" stop-color="#2D4139"/></linearGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="190%" height="190%"><feGaussianBlur stdDeviation="15"/></filter>
+ <pattern id="grain" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M-10 11Q10 3 28 12T80 14M-5 21Q24 9 39 21T80 26M-10 44Q14 33 41 42T83 46M-4 57Q24 48 40 56T90 60" stroke="#5C3E28" stroke-opacity=".22" stroke-width=".8"/></pattern>
+</defs>
+<ellipse cx="402" cy="378" rx="245" ry="33" fill="#39382C" opacity=".12" filter="url(#shadow)"/>
+<g transform="translate(320 42) rotate(13)">
+ <path d="M0 24H231V309L0 317Z" fill="#D2C6AD"/>
+ <path d="M6 17H237V301L6 309Z" fill="url(#paper)" stroke="#BCB096"/>
+ <path d="M11 30L231 24M11 37L231 31M11 44L231 38M11 291L231 285M11 298L231 292" stroke="#BBAF98" stroke-width="1"/>
+ <path d="M-3 0H228V287H-3Z" fill="url(#cover)" stroke="#27382F"/>
+ <path d="M18 0V287M22 0V287" stroke="#86907A" stroke-width=".7"/>
+ <path d="M-9 31H26V66H-9M-9 102H26V137H-9M-9 175H26V210H-9M-9 244H26V279H-9" stroke="#D2C9AE" stroke-width="2"/>
+ <rect x="155" y="24" width="43" height="141" fill="#E8E0CC" stroke="#B9AC90"/>
+ <rect x="161" y="30" width="31" height="129" stroke="#9A8F75" stroke-width=".8"/>
+ <g fill="#344339" font-family="SimSun,serif" font-size="24" text-anchor="middle"><text x="176" y="57">字</text><text x="176" y="88">有</text><text x="176" y="119">新</text><text x="176" y="150">生</text></g>
+ <path d="M41 27H127M41 33H110" stroke="#8D9A80" stroke-opacity=".3"/>
+</g>
+<g transform="translate(91 177) rotate(-10)">
+ <path d="M0 15L155 0L180 29L24 45Z" fill="#BC9D71"/>
+ <path d="M155 0L180 29V191L155 164Z" fill="#674A30"/>
+ <path d="M0 15L155 0V164L0 179Z" fill="url(#wood)" stroke="#715033"/>
+ <path d="M0 15L155 0V164L0 179Z" fill="url(#grain)"/>
+ <path d="M12 28L141 15V150L12 164Z" stroke="#DEC29A" stroke-opacity=".45"/>
+ <g transform="translate(76 123) scale(-1 1)"><text text-anchor="middle" fill="#2E3025" font-size="115" font-family="SimSun,serif" font-weight="bold">字</text></g>
+ <path d="M10 176L158 161L178 188L29 203Z" fill="#6C4C30"/>
+</g>
+<g transform="translate(244 274) rotate(8)">
+ <path d="M0 10L112 0L132 20L20 31Z" fill="#BEA27C"/>
+ <path d="M112 0L132 20V131L112 112Z" fill="#705137"/>
+ <path d="M0 10L112 0V112L0 123Z" fill="url(#wood)" stroke="#7A593B"/>
+ <path d="M0 10L112 0V112L0 123Z" fill="url(#grain)"/>
+ <g transform="translate(55 86) scale(-1 1)"><text text-anchor="middle" fill="#303227" font-size="78" font-family="SimSun,serif">印</text></g>
+</g>
+<g transform="translate(459 239) rotate(-14)">
+ <path d="M0 0H175L190 140H9Z" fill="url(#paper)" stroke="#C6B99E"/>
+ <path d="M8 10H166L179 129H17Z" stroke="#BFAF91" stroke-width=".8"/>
+ <path d="M21 22V110M34 22V110" stroke="#A79575" stroke-width=".4"/>
+ <g font-family="SimSun,serif" fill="#3D4437" text-anchor="middle" font-size="31"><text x="128" y="44">文</text><text x="128" y="79">脈</text><text x="88" y="44">相</text><text x="88" y="79">傳</text></g>
+ <rect x="62" y="92" width="21" height="23" stroke="#8F3027"/>
+ <path d="M67 97H78M72 96V110M67 103H78" stroke="#8F3027" stroke-width="1.4"/>
+ <path d="M172 0Q156 20 190 31L190 0Z" fill="#DDD3BF" stroke="#C6B99E"/>
+</g>
+<g transform="translate(651 184) rotate(19)">
+ <path d="M0 0H11V130H0Z" fill="#80603F"/><path d="M3 3V126" stroke="#B79C72"/>
+ <path d="M-7 130H18L17 168Q7 195 5 195Q0 175-5 168Z" fill="#35392F"/>
+ <path d="M-7 130H18V141H-7Z" fill="#9A845A"/>
+ <path d="M-2 145Q5 171 5 192M5 145V185M12 145Q6 173 5 192" stroke="#76786B" stroke-width=".7"/>
+</g>
+<g transform="translate(68 83)" fill="#5E655F" opacity=".65" font-family="SimSun,serif" font-size="14"><text x="0" y="0">一</text><text x="0" y="25">字</text><text x="0" y="50">一</text><text x="0" y="75">印</text></g>
+<path d="M84 417H649" stroke="#A08C67" stroke-opacity=".35"/>
+<text x="647" y="441" text-anchor="end" fill="#7D765F" font-family="SimSun,serif" font-size="12" letter-spacing="4">字可重排 · 文脉不息</text>
+</svg>
